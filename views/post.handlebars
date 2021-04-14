@@ -8,7 +8,21 @@
         <span class="dollar-amount">{{format_amount needed_funding}}</span>
         needed
     </p>
+    {{#if logged_in}}
     <p>
-        <button class="btn btn-primary">Fund this Project!</button>
+        <button class="btn btn-primary addComment">Add comments!</button>
     </p>
+
+    <div class="comment">
+
+    </div>
+    {{else}}
+    <p>Log in to leave a comment</p>
+    {{/if}}
+
 </div>
+
+{{#if logged_in}}
+
+<script src="/js/comment.js"></script>
+{{/if}}
