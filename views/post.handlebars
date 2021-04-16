@@ -20,7 +20,28 @@
     <p>Log in to leave a comment</p>
     {{/if}}
 
+    {{!-- <div class="commentsMade">
+
+    </div> --}}
 </div>
+{{#if comments.length}}
+<div class="col-md-6 project-list">
+    <h3>Comments:</h3>
+
+    {{#each comments as |project|}}
+    <div class="row mb-2">
+        <div class="col-md-8">
+            <h4><a href="/comments/{{project.id}}">{{project.content}} Created by {{project.name}} {{project.date}}</a>
+            </h4>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+
 
 {{#if logged_in}}
 
