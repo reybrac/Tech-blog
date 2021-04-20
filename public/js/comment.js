@@ -19,7 +19,7 @@ const newCommentHandler = () => {
     const post_id = document.location.pathname.split("/")[2];
     const content = textArea.value;
     console.log(content);
-    // commentsMadeEl.appendChild(submitComment);
+
     if (content) {
       const response = await fetch(`/api/comments`, {
         method: "POST",
@@ -53,17 +53,4 @@ const commentingInfo = async () => {
       "Content-type": "application/json",
     },
   });
-
-  var commentIndex = "";
-  commentRequest.json().then((newComment) => {
-    console.log("newComment: ", newComment);
-    // for (let index = 0; index < newComment.data.length; index++) {
-    //   let sleepDate = newSleep.data[index].date;
-    //   let sleepTime = newSleep.data[index].hours;
-    //   sleepIndex = sleepIndex + sleepDate + `: ` + sleepTime + `<br>`;
-    //   console.log(sleepIndex);
-    // }
-    // document.getElementById("sleepingData").innerHTML = sleepIndex;
-  });
 };
-// commentingInfo();

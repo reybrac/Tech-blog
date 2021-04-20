@@ -5,7 +5,12 @@
         <h2>
             <!-- Call helper function with triple brackets to render the emoji span as HTML -->
             {{{get_emoji}}}
-            <a href="/post/{{project.id}}">{{project.name}}</a>
+            {{#if logged_in}}<a href="/post/{{project.id}}">
+                {{project.name}}</a>
+            {{else}}
+            <a id="alertMe">{{project.name}}</a>
+
+            {{/if}}
         </h2>
         <p>
 
@@ -22,3 +27,4 @@
     </div>
 </div>
 {{/each}}
+<script src="./js/post.js"></script>

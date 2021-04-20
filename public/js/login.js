@@ -51,3 +51,8 @@ document
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
+
+document.querySelector("#createAccount").onclick = function () {
+  document.getElementById("login").style.display = "none";
+  document.getElementById("signup").style.display = "block";
+};
