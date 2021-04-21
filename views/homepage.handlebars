@@ -5,18 +5,16 @@
         <h2>
             <!-- Call helper function with triple brackets to render the emoji span as HTML -->
             {{{get_emoji}}}
-            {{#if logged_in}}<a href="/post/{{project.id}}">
-                {{project.name}}</a>
-            {{else}}
-            <a id="alertMe">{{project.name}}</a>
 
-            {{/if}}
+            <a href="/post/{{project.id}}">
+                {{project.name}}</a>
+
         </h2>
         <p>
 
 
-            <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-            needed!
+            <span class="dollar-amount">{{project.hash_tag}}</span>
+
         </p>
         <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
     </div>
@@ -27,4 +25,3 @@
     </div>
 </div>
 {{/each}}
-<script src="./js/post.js"></script>

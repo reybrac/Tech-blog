@@ -4,9 +4,8 @@
     <p>{{description}}</p>
     <p>Created by {{user.name}} on {{format_date date_created}}</p>
     <p>
-        <span for="img" aria-label="money">💲</span>
-        <span class="dollar-amount">{{format_amount needed_funding}}</span>
-        needed
+        <span for="img" aria-label="money"></span>
+        <span class="dollar-amount">{{hash_tag}}</span>
     </p>
     {{#if logged_in}}
     <p>
@@ -17,7 +16,7 @@
 
     </div>
     {{else}}
-    <p>Log in to leave a comment</p>
+    <p><a href="/login">Log in</a> to leave a comment</p>
     {{/if}}
 
     {{!-- <div class="commentsMade">

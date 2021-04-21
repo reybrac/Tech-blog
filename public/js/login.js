@@ -56,3 +56,30 @@ document.querySelector("#createAccount").onclick = function () {
   document.getElementById("login").style.display = "none";
   document.getElementById("signup").style.display = "block";
 };
+
+// var duration = 10;
+
+// setInterval(updateTimer, 1000);
+
+// function updateTimer() {
+//   duration--;
+//   if (duration < 1){
+//     const response = await fetch("/api/users/logout", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//     });
+
+//     if (response.ok) {
+//       document.location.replace("/");
+//     } else {
+//       alert(response.statusText);
+//     }
+
+//   }
+// }
+
+// window.addEventListener("mousemove", resetTimer);
+
+// function resetTimer(){
+//   duration = 10;
+// }

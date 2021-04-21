@@ -23,7 +23,7 @@ Post.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    hash_tag: {
       type: DataTypes.STRING,
       allowNull: true,
     },
