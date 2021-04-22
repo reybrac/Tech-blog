@@ -14,7 +14,7 @@ const logout = async () => {
 
 document.querySelector("#logout").addEventListener("click", logout);
 
-var duration = 10;
+var duration = 1000;
 
 setInterval(updateTimer, 1000);
 
@@ -26,7 +26,10 @@ function updateTimer() {
 }
 
 window.addEventListener("mousemove", resetTimer);
+window.addEventListener("keydown", resetTimer);
+
+window.addEventListener("keypress", resetTimer);
 
 function resetTimer() {
-  duration = 10;
+  duration = 1000;
 }
