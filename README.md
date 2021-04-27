@@ -21,7 +21,7 @@ A blog site similar to a Wordpress site, where developers can publish their blog
 Install NPM MYSQL2, Sequelize, and Express packages. Run the server and start using the application.
 
 Copy the link and paste it to your browser to deploy the live site.
-https://pacific-meadow-78512.herokuapp.com/
+https://techno1-blog.herokuapp.com/
 
 ## Usage information:
 
