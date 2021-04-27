@@ -6,7 +6,7 @@ const logout = async () => {
 
   if (response.ok) {
     document.location.replace("/");
-    alert("Your session has expired!");
+    alert("Your have been logged out!");
   } else {
     alert(response.statusText);
   }
@@ -14,7 +14,7 @@ const logout = async () => {
 
 document.querySelector("#logout").addEventListener("click", logout);
 
-var duration = 1000;
+var duration = 120;
 
 setInterval(updateTimer, 1000);
 
@@ -31,5 +31,5 @@ window.addEventListener("keydown", resetTimer);
 window.addEventListener("keypress", resetTimer);
 
 function resetTimer() {
-  duration = 1000;
+  duration = 120;
 }
